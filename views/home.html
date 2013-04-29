@@ -28,6 +28,14 @@
 	  }
 	}
 
+$(document).ready(function() {
+	$.ajax({
+	  type: "GET",
+	  url: "/takeoff",
+	  dataType: "script"
+	});
+});
+
 document.addEventListener("facetrackingEvent", function(event) {
 	if (event.angle <= 1.35) {
 	 	console.log('move left');
