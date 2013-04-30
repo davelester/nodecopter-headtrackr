@@ -44,11 +44,21 @@ document.addEventListener("facetrackingEvent", function(event) {
 		  url: "/turnleft",
 		  dataType: "script"
 		});
-	}
-	if (event.angle >= 1.85) {
+	} else if (event.angle >= 1.85) {
 	 console.log('move right');
+		$.ajax({
+		  type: "GET",
+		  url: "/turnright",
+		  dataType: "script"
+		});
+	} else {
+		$.ajax({
+		  type: "GET",
+		  url: "/hover",
+		  dataType: "script"
+		});
 	}
-	sleep(500);
+	sleep(800);
 });
 </script>
 </body>

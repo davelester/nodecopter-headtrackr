@@ -18,6 +18,7 @@ const index = require('./controllers/index');
 app.get('/', index.home);
 app.get('/takeoff', index.takeoff);
 app.get('/turnleft', index.turnleft);
+app.get('/turnright', index.turnright);
 app.get('/hover', index.hover);
 
 var server = http.createServer(app);
